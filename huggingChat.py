@@ -4,6 +4,7 @@ from streamlit_extras.colored_header import colored_header
 from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain import PromptTemplate, HuggingFaceHub, LLMChain
 from dotenv import load_dotenv
+export HUGGINGFACEHUB_API_TOKEN=YOUR_GENERATED_API_TOKEN
 
 import pandas as pd
 from model import PredictReview
@@ -93,7 +94,9 @@ def main():
             
             prompt = PromptTemplate(template=template, input_variables=["question"])
 
-            llm=HuggingFaceHub(repo_id="OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5", model_kwargs={"max_new_tokens":1200})
+            llm=HuggingFaceHub(repo_id="OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+                               model_kwargs={"max_new_tokens":1200},
+                               huggingfacehub_api_token="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")
 
             llm_chain=LLMChain(
                 llm=llm,
