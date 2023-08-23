@@ -32,7 +32,7 @@ st.set_page_config(page_title="Amazon Product App")
 
 # Sidebar contents
 with st.sidebar:
-    st.title('Amazon Product Related Queries App 🤗💬')
+    st.title('Amazon Product Related Queries App 🗣️')
     st.markdown('''
     ## About
     This app is an Review Sentiment Analysis and a LLM-powered chatbot for Amazon Product related queries:
@@ -40,9 +40,8 @@ with st.sidebar:
     menu = ['Amazon Review Sentiment Analysis','Product Queries BOT']
     choice  = st.sidebar.selectbox("Select an option", menu)
     add_vertical_space(10)
-    st.write('Made by [Rohit Wahwal](https://github.com/zerothrohit)')
 
-st.header("Your Amazon Assistant 💬")
+st.header("Your Amazon Assistant 🗣️")
 st.divider()
 
 def main():
